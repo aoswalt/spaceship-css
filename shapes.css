@@ -1,0 +1,148 @@
+.field {
+	position: absolute;
+	width: 600px;
+	height: 800px;
+	background-color: #052535;
+}
+
+.ship {
+	position: absolute;
+	left: 10em;
+	top: 22em;
+	z-index: 100;
+
+	font-size: 0.8em;
+}
+
+.ship-top {
+	display: block;
+	position: absolute;
+	left: 5.5em;
+	vertical-align: top;
+	border-right: 2em solid transparent;
+	border-left: 2em solid transparent;
+	border-bottom: 4.1em solid red;
+}
+
+.ship-body {
+	display: block;
+	position: absolute;
+	top: 4em;
+	border-right: 2.5em solid transparent;
+	border-left: 2.5em solid transparent;
+	border-top: 5em solid red;
+	width: 10em;
+}
+
+.ship-jet-left {
+	display: inline-block;
+	position: absolute;
+	top: 9em;
+	left: 2.5em;
+	border-right: 1.25em solid transparent;
+	border-left: 1.25em solid transparent;
+	border-top: 2.5em solid orange;
+}
+
+.ship-jet-right {
+	display: inline-block;
+	position: absolute;
+	top: 9em;
+	left: 10em;
+	border-right: 1.25em solid transparent;
+	border-left: 1.25em solid transparent;
+	border-top: 2.5em solid orange;
+}
+
+.star-container {
+	position: absolute;
+	font-size: 0.4em;
+	padding-top: 2em;
+
+	animation: starfall 2s infinite;
+	animation-timing-function: linear;
+}
+
+.star {
+	margin: 2.5em 0;
+	position: absolute;
+	display: block;
+	color: white;
+	wdith: 0;
+	height: 0;
+	border-right: 5em solid transparent;
+	border-left: 5em solid transparent;
+	border-bottom: 3.5em solid white;
+	transform: rotate(35deg);
+}
+
+.star:before {
+	border-bottom: 4em solid white;
+	border-right: 1.5em solid transparent;
+	border-left: 1.5em solid transparent;
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: -2.25em;
+	left: -3.25em;
+	display: block;
+	content: "";
+	transform: rotate(-35deg);
+}
+
+.star:after {
+	position: absolute;
+	display: block;
+	color: white;
+	top: .15em;
+	left: -5.25em;
+	width: 0;
+	height: 0;
+	border-right: 5em solid transparent;
+	border-bottom: 3.5em solid white;
+	border-left: 5em solid transparent;
+	transform:      rotate(-70deg);
+	content: "";
+}
+
+.star1 {
+	left: 0px;
+	/*animation-delay: 1s;*/
+}
+
+.star2 {
+	left: 75px;
+	animation-delay: 1s;
+}
+
+.star3 {
+	left: 220px;
+	animation-delay: 0.5s;
+}
+
+.star4 {
+	left: 275px;
+	animation-delay: 0.25s;
+}
+
+.star5 {
+	left: 0px;
+	animation-delay: 0.75s;
+}
+
+.star6 {
+	left: 125px;
+	animation-delay: 1.5s;
+}
+
+.star7 {
+	left: 475px;
+	/*animation-delay: 1s;*/
+}
+
+@keyframes starfall {
+	0%  { transform: translate(0, -100px);
+				transform: rotate(-20deg);
+			}
+	100% { transform: translate(0, 800px); }
+}
